@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extravagant Scientific Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.js"></script>
+</head>
+<body>
+    <div id="aside-container">
+        <div id="aside">
+            <p>This is a scientific calculator that can perform a wide range of mathematical operations. It supports trigonometric functions, logarithms, and exponential functions, as well as constants like π and e. It also includes a history feature to keep track of previous calculations.</p>
+        </div>
+        <div id="aside-2">
+            <p>Please ensure to close all parentheses before calculating the result.</p>
+            <p>If you don't, the calculator will output an error.</p>
+        </div>
+    </div>
+    
+    <div id="calculator">
+        <input type="text" id="display" readonly>
+        <div class="buttons">
+            <button onclick="appendToDisplay('(')">(</button>
+            <button onclick="appendToDisplay(')')">)</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('/')">/</button>
+            <button onclick="mathFunction('sin')">sin</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('*')">*</button>
+            <button onclick="mathFunction('cos')">cos</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('-')">-</button>
+            <button onclick="mathFunction('tan')">tan</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="appendToDisplay('+')">+</button>
+            <button onclick="mathFunction('log')">log</button>
+            <button onclick="mathFunction('sqrt')">√</button>
+            <button onclick="mathFunction('exp')">exp</button>
+            <button onclick="appendToDisplay(Math.PI)">π</button>
+            <button onclick="appendToDisplay(Math.E)">e</button>
+            <button onclick="mathFunction('asin')">asin</button>
+            <button onclick="mathFunction('acos')">acos</button>
+            <button onclick="mathFunction('atan')">atan</button>
+            <button onclick="mathFunction('ln')">ln</button>
+            <button onclick="mathFunction('abs')">|x|</button>
+            <button onclick="pasteEquation()">Paste</button>
+            <button onclick="backspace()">←</button>
+            <button onclick="clearDisplay()">C</button>
+        </div>
+    </div>
+
+    <div id="history">
+        <h2>Calculation History</h2>
+        <ul id="historyList"></ul>
+    </div>
+    
+
+    <script src="calculator.js"></script>
+</body>
+</html>

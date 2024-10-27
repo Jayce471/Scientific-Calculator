@@ -1,0 +1,113 @@
+body {
+    background-color: #000; /* Solid black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#calculator {
+    width: 400px;
+    background-color: #111;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+#display {
+    width: 95%;
+    height: 60px;
+    background-color: #000;
+    color: #0f0;
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+button {
+    height: 45px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: #222;
+    color: #0f0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#history {
+    width: 300px;
+    background-color: #111;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+    margin-left: 20px;
+    max-height: 700px;
+    overflow-y: auto; /* Allow scrolling if there are many items */
+}
+
+#history h2 {
+    color: #0f0;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#historyList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#historyList li {
+    color: #0f0;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-bottom: 1px solid #222;
+}
+#aside-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between #aside and #aside-2 */
+}
+
+#aside, #aside-2 {
+    width: 300px;
+    background-color: #111;
+    padding: 10px;
+    border-radius: 10px;
+    color: rgb(136, 137, 136);
+    font-size: 14px;
+    margin-right: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#aside p, #aside-2 p {
+    font-size: 14px;    
+    margin: 0;
+    line-height: 1.8rem;
+    color: rgb(170, 247, 170);
+    font-weight: bold;
+    text-decoration:wavy;
+}
+
+#aside :nth-child(2) {
+    color: rgb(255, 255, 255);
+}
